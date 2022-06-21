@@ -1,8 +1,9 @@
-package ru.javawebinar.topjava.model;
+package ru.javawebinar.topjava.to;
 
 import java.time.LocalDateTime;
 
 public class MealTo {
+
     private final Integer id;
 
     private final LocalDateTime dateTime;
