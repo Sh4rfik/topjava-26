@@ -82,8 +82,7 @@ public class UserServiceTest {
 
     @Test
     public void update() {
-        User updated = getUpdated();
-        service.update(updated);
+        service.update(getUpdated());
         assertMatch(service.get(USER_ID), getUpdated());
     }
 

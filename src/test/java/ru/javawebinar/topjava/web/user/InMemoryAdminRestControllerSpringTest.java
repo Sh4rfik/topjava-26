@@ -2,6 +2,7 @@ package ru.javawebinar.topjava.web.user;
 
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,9 +15,9 @@ import static ru.javawebinar.topjava.UserTestData.NOT_FOUND;
 import static ru.javawebinar.topjava.UserTestData.USER_ID;
 
 @ContextConfiguration({
-        "classpath:spring/spring-app.xml",
-        "classpath:spring/spring-app-inmemory.xml",
+        "classpath:spring-test/spring-app-inmemory.xml",
 })
+@Ignore
 @RunWith(SpringRunner.class)
 public class InMemoryAdminRestControllerSpringTest {
 
