@@ -38,9 +38,8 @@ public class Meal extends AbstractBaseEntity {
     private String description;
 
     @Column(name = "calories", nullable = false)
-    @NotNull
     @Range(min = 10, max = 5000)
-    private Integer calories;
+    private int calories;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @NotNull
@@ -69,7 +68,7 @@ public class Meal extends AbstractBaseEntity {
         return description;
     }
 
-    public Integer getCalories() {
+    public int getCalories() {
         return calories;
     }
 
@@ -89,7 +88,7 @@ public class Meal extends AbstractBaseEntity {
         this.description = description;
     }
 
-    public void setCalories(Integer calories) {
+    public void setCalories(int calories) {
         this.calories = calories;
     }
 
