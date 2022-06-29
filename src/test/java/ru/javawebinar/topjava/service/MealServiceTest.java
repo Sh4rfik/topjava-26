@@ -52,28 +52,14 @@ public class MealServiceTest {
     @ClassRule
     public static final ExternalResource resource = new ExternalResource() {
         @Override
-        protected void before() throws Exception{
-            System.out.println("Tests starting...");
-        }
-        @Override
         protected void after() {
             log.info("\n-------------------------------" +
                     "\nTest               Duration, ms" +
                     "\n-------------------------------" +
                     results +
                     "\n-------------------------------");
-            System.out.println("Tests ending!");
         }
     };
-
-//    @AfterClass
-//    public static void printResult() {
-//        log.info("\n-------------------------------" +
-//                "\nTest               Duration, ms" +
-//                "\n-------------------------------" +
-//                results +
-//                "\n-------------------------------");
-//    }
 
     @Autowired
     private MealService service;
