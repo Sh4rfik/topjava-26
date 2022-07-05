@@ -54,6 +54,11 @@ public class User extends AbstractNamedEntity {
     @Range(min = 10, max = 10000)
     private int caloriesPerDay = DEFAULT_CALORIES_PER_DAY;
 
+    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
+    @OrderBy("dateTime DESC")
+    private List<Meal> meals;
+
+
     public User() {
     }
 
@@ -121,6 +126,10 @@ public class User extends AbstractNamedEntity {
 
     public String getPassword() {
         return password;
+    }
+
+    public List<Meal> getMeals() {
+        return meals;
     }
 
     @Override
