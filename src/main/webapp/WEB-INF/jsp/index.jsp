@@ -6,7 +6,7 @@
 <jsp:include page="fragments/headTag.jsp"/>
 <body>
 <jsp:include page="fragments/bodyHeader.jsp"/>
-<br>
+
 <section>
     <form method="post" action="users">
         <spring:message code="app.login"/>: <select name="userId">
